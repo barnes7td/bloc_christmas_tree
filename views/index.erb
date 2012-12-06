@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(document).ready(function() {
+        setInterval(function() {
+            location.reload();
+        }, 2000);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <% 1..10.times do |i| %>
+        <% 1..10.times do |j| %>
+          <div class="<%="square-#{i+ 1}-#{j+ 1}"%>"></div>
+        <% end %>
+        <div class="spacer"></div>
+      <% end %>
+    </div>
+    <% 1..5.times do |t| %>
+      <div class="<%="triangle-#{t + 1}"%>"></div>
+    <% end %>
+    <% 1..5.times do |t2| %>
+      <div class="<%="triangle2-#{t2 + 1}"%>"></div>
+    <% end %>
+  </body>
+</html>
